@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Note = mongoose.model("Note");
 module.exports = {
     showall: function (req, res) {
-        Note.find({}, function (err, notes) {
+        Note.find({}).sort('-createdAt').exec(function (err, notes) {
             if (err) {
                 console.log(err);
             } else {
@@ -17,7 +17,7 @@ module.exports = {
                 res.json({ error: "failed to create note" });
                 console.log('something went wrong');
             } else {
-                Note.find({}, function (err, notes) {
+                Note.find({}).sort('-createdAt').exec(function (err, notes) {
                     console.log('successfully added a note!');
                     res.json(notes);
                 });
