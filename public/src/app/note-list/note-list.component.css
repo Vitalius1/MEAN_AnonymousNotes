@@ -1,0 +1,17 @@
+#list{
+    border: 2px solid black;
+    background: white;
+    margin-top: 2%;
+    padding: 1%;
+    height: 400px;
+    overflow: scroll;
+}
+.one-note{
+    padding: 1%;
+    border: 2px solid black;
+    margin: 1%
+}
+.time{
+    float: right;
+    margin-top: 0;
+}

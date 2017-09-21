@@ -1,0 +1,18 @@
+.errors{
+    color: red;
+}
+#form{
+    padding: 5% 2.5%;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 2em
+}
+input{
+    width: 70%;
+    font-size: 0.6em;
+}
+button{
+    font-size: 0.6em;
+    color: whitesmoke;
+    background: #149C20
+}

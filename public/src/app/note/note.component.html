@@ -1,0 +1,11 @@
+<div id="form">
+  <form (submit)="onSubmit(form)" #form="ngForm">
+    <label for="note">Note</label>
+    <input name="note" rows="2" required minlength="3" [(ngModel)]='note.content' #content='ngModel' />
+    <button type="submit" [disabled]="form.invalid">Add Note</button>
+    <div class="errors" *ngIf="content.invalid && (content.dirty || content.touched)">
+      <div class="errors" *ngIf="content?.errors.required">Note is required.</div>
+      <div class="errors" *ngIf="content?.errors.minlength">Note should be at least 3 characters long.</div>
+    </div>
+  </form>
+</div>
